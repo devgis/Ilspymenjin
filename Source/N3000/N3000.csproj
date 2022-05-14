@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{102C3B8F-7A0D-445C-A03A-21E6DA146C26}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>N3000</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="n3k_controller">
+      <HintPath>..\lib\n3k_controller.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Management" />
+    <Reference Include="Interop.jmail">
+      <HintPath>..\lib\Interop.jmail.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Interop.JRO">
+      <HintPath>..\lib\Interop.JRO.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WG3000_COMM.Basic\dfrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmControlHolidayAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmControlHolidaySet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmControllerDoorControlSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmControllerZoneSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmControlSeg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmDeleteRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmDoorAsSwitch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmEditUserFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmExtendedFunctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmInputNewName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmInterfaceLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmLogQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmNetControllerConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmOperatePrivilege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmOperatorDepartmentsConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmOperatorUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmOperatorZonesConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmOptionAdvanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmPrivilege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmPrivilegeCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmPrivilegeSingle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmSetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmShowError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmSwipeRecordsFindOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmSystemParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmTCPIPConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmTCPIPWEBConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmTranslate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmUploadOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmUserAutoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmUserBatchUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmUsersCardLost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmUserSelected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\dfrmWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmADCT3000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmControllers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmControlSegs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmDepartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmPrivileges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmSwipeRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmWatchingMoreRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Basic\frmZones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Core\comMjSpecialUpdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Core\ControllerRunInformation.cs" />
+    <Compile Include="WG3000_COMM.Core\DatatableToXml.cs" />
+    <Compile Include="WG3000_COMM.Core\dfrmSelectColumnsShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Core\DGVPrinter.cs" />
+    <Compile Include="WG3000_COMM.Core\DoorStatus.cs" />
+    <Compile Include="WG3000_COMM.Core\ExcelObject.cs" />
+    <Compile Include="WG3000_COMM.Core\frmN3000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Core\InfoRow.cs" />
+    <Compile Include="WG3000_COMM.Core\MjRec.cs" />
+    <Compile Include="WG3000_COMM.Core\OnCommEventHandler.cs" />
+    <Compile Include="WG3000_COMM.Core\OnEventHandler.cs" />
+    <Compile Include="WG3000_COMM.Core\ucMapDoor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Core\UserControlFind.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Core\UserControlFindSecond.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Core\WatchingService.cs" />
+    <Compile Include="WG3000_COMM.Core\wgAppConfig.cs" />
+    <Compile Include="WG3000_COMM.Core\wgAppRunInfo.cs" />
+    <Compile Include="WG3000_COMM.Core\wgCommServer.cs" />
+    <Compile Include="WG3000_COMM.Core\wgCommService.cs" />
+    <Compile Include="WG3000_COMM.Core\wgGlobal.cs" />
+    <Compile Include="WG3000_COMM.Core\wgMail.cs" />
+    <Compile Include="WG3000_COMM.Core\wgRunInfoLog.cs" />
+    <Compile Include="WG3000_COMM.Core\wgUdpServer.cs" />
+    <Compile Include="WG3000_COMM.Core\XMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Core\XMessageBoxButtons.cs" />
+    <Compile Include="WG3000_COMM.Core\XMessageBoxIcon.cs" />
+    <Compile Include="WG3000_COMM.Core\XmlToDatatable.cs" />
+    <Compile Include="WG3000_COMM.Core\XTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.DataOper\icConsumer.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icConsumerShare.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icController.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icControllerConfigureFromDB.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icControllerTimeSegList.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icControllerZone.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icDesc.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icGroup.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icOperator.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icPrivilege.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icPrivilegeShare.cs" />
+    <Compile Include="WG3000_COMM.DataOper\icSwipeRecord.cs" />
+    <Compile Include="WG3000_COMM.ExtendFunc.Elevator\dfrmElevatorGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Elevator\dfrmFloors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Elevator\dfrmOneToMoreSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Elevator\dfrmUserFloor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Elevator\frmUsers4Elevator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Map\dfrmMapInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Map\dfrmSelectMapDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Map\frmMaps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meal\dfrmMealOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meal\dfrmMealSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meal\frmMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meeting\dfrmManualSign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingAdr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingAdrSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingSign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingStatDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Meeting\frmMeetings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\comPatrol.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\comPatrol_Acc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolReportCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolReportFindOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolTaskAutoPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolTaskDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolTaskEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\dfrmRouteEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\frmPatrolReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\frmPatrolRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\frmPatrolStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.Patrol\frmPatrolTaskData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.PCCheck\dfrmCheckAccessConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.PCCheck\dfrmCheckAccessSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc.PCCheck\dfrmPCCheckAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmAntiBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmCommPSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmControllerAntiPassback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmControllerExtendFuncPasswordManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmControllerFirstCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmControllerInterLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmControllerMultiCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmControllerTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmControllerTaskList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmControllerWarnSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmFirstCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmLocate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmMultiCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmPeripheralControlBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmPeripheralControlBoardSuper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ExtendFunc\dfrmPersonsInside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Properties\Resources.cs" />
+    <Compile Include="WG3000_COMM.Properties\Settings.cs" />
+    <Compile Include="WG3000_COMM.Reports.Shift\comCreateAttendenceData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\comCreateAttendenceData_Acc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\comShift.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\comShift_Acc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmAutoShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmHolidayAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmHolidaySet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmHolidayType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmLeaveAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmManualSwipeRecordsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmShiftAttReportCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmShiftAttReportFindOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmShiftDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmShiftEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmShiftNormalOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmShiftNormalParamSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmShiftOtherParamSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\dfrmShiftOtherTypeSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\frmLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\frmManualSwipeRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\frmShiftAttReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\frmShiftAttStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\frmShiftOtherData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.Reports.Shift\frmShiftOtherTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM.ResStrings\CommonStr.cs" />
+    <Compile Include="WG3000_COMM\dfrmDbCompact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM\frmProductFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM\frmTestController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WG3000_COMM\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmAbout.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmControlHolidayAdd.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmControlHolidaySet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmController.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmControllerDoorControlSet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmControllerZoneSelect.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmControlSeg.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmDeleteRecords.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmDoorAsSwitch.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmEditUserFile.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmExtendedFunctions.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmFind.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmInputNewName.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmInterfaceLock.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmLogQuery.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmNetControllerConfig.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmOperatePrivilege.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmOperator.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmOperatorDepartmentsConfiguration.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmOperatorUpdate.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmOperatorZonesConfiguration.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmOption.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmOptionAdvanced.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmPrivilege.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmPrivilegeCopy.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmPrivilegeSingle.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmRegister.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmSetPassword.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmShowError.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmSwipeRecordsFindOption.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmSystemParam.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmTCPIPConfigure.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmTCPIPWEBConfigure.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmTranslate.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmUploadOption.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmUser.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmUserAutoAdd.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmUserBatchUpdate.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmUsersCardLost.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmUserSelected.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\dfrmWait.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmADCT3000.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmConsole.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmControllers.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmControlSegs.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmDepartments.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmLogin.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmPrivileges.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmSwipeRecords.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmUsers.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmWatchingMoreRecords.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Basic\frmZones.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Core\dfrmSelectColumnsShow.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Core\UserControlFind.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Core\UserControlFindSecond.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Core\XMessageBox.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Elevator\dfrmElevatorGroup.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Elevator\dfrmFloors.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Elevator\dfrmOneToMoreSetup.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Elevator\dfrmUserFloor.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Elevator\frmUsers4Elevator.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Map\dfrmMapInfo.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Map\dfrmSelectMapDoor.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Map\frmMaps.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meal\dfrmMealOption.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meal\dfrmMealSetup.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meal\frmMeal.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meeting\dfrmManualSign.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingAdr.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingAdrSet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingSet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingSign.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meeting\dfrmMeetingStatDetail.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Meeting\frmMeetings.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolReportCreate.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolReportFindOption.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolSetup.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolTaskAutoPlan.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolTaskDelete.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\dfrmPatrolTaskEdit.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\dfrmRouteEdit.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\frmPatrolReport.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\frmPatrolRoute.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\frmPatrolStatistics.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.Patrol\frmPatrolTaskData.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.PCCheck\dfrmCheckAccessConfigure.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.PCCheck\dfrmCheckAccessSetup.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc.PCCheck\dfrmPCCheckAccess.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmAntiBack.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmCommPSet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmControllerAntiPassback.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmControllerExtendFuncPasswordManage.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmControllerFirstCard.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmControllerInterLock.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmControllerMultiCards.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmControllerTask.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmControllerTaskList.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmControllerWarnSet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmFirstCard.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmLocate.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmMultiCards.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmPeripheralControlBoard.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmPeripheralControlBoardSuper.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ExtendFunc\dfrmPersonsInside.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Properties\Resources.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmAutoShift.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmHolidayAdd.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmHolidaySet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmHolidayType.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmLeaveAdd.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmManualSwipeRecordsAdd.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmShiftAttReportCreate.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmShiftAttReportFindOption.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmShiftDelete.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmShiftEdit.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmShiftNormalOption.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmShiftNormalParamSet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmShiftOtherParamSet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\dfrmShiftOtherTypeSet.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\frmLeave.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\frmManualSwipeRecords.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\frmShiftAttReport.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\frmShiftAttStatistics.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\frmShiftOtherData.resx" />
+    <EmbeddedResource Include="WG3000_COMM.Reports.Shift\frmShiftOtherTypes.resx" />
+    <EmbeddedResource Include="WG3000_COMM.ResStrings\CommonStr.resx" />
+    <EmbeddedResource Include="WG3000_COMM\dfrmDbCompact.resx" />
+    <EmbeddedResource Include="WG3000_COMM\frmTestController.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
